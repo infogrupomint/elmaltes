@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Maltes</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div id="app">
+  <h1>El Maltes</h1>
+
+  <div class="categories" id="categories">
+    <!-- Aquí se cargarán las categorías -->
+  </div>
+
+  <div id="menu" class="menu">
+    <!-- Aquí se cargarán los productos -->
+  </div>
+
+  <div id="cart" class="cart">
+    <h2>Carrito de Compras</h2>
+    <ul id="cart-items"></ul>
+    <p>Total: <span id="cart-total">$0</span></p>
+    <button onclick="sendOrder()">Enviar Pedido por WhatsApp</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
