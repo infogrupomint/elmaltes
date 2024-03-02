@@ -58,8 +58,10 @@ window.onload = function() {
 // Función para cargar las categorías
 function loadCategories() {
   const categoriesElement = document.getElementById('categories');
+  
   categories.forEach(category => {
     const button = document.createElement('button');
+    button.className = "categorias-btn";
     button.textContent = category;
     button.addEventListener('click', () => filterCategory(category));
     categoriesElement.appendChild(button);
@@ -74,8 +76,8 @@ function filterCategory(category) {
   products[category].forEach(product => {
     const productHTML = `
       <div class="product">
-        <h3>${product.name}</h3>
-        <p>Precio: $${product.price}</p>
+        <h3>${product.name} </h3>
+         <p>Precio: $${product.price}</p>
         <button onclick="addToCart('${product.name}', ${product.price})">Agregar al carrito</button>
       </div>
     `;
@@ -104,11 +106,14 @@ function addToCart(productName, productPrice) {
   // Limpiar el contenido previo del carrito
   cartItemsElement.innerHTML = '';
 
+ 
+
   // Recorrer la lista de productos en el carrito y actualizar la interfaz de usuario
   let total = 0;
   cart.forEach(item => {
     const listItem = document.createElement('li');
-    listItem.textContent = `${item.name} - $${item.price}`;
+    listItem.className="lista-carrito";
+    listItem.textContent = `${item.name} - $${item.price} \n`;
     cartItemsElement.appendChild(listItem);
     total += item.price;
   });
@@ -117,17 +122,18 @@ function addToCart(productName, productPrice) {
   cartTotalElement.textContent = `$${total.toFixed(2)}`;
 }
 
+
 // Función para enviar el pedido por WhatsApp
 function sendOrder() {
 
-
   // Formar el mensaje del pedido
-  let mensajePedido = `Pedido:\n`;
+  let mensajePedido = `Pedido:\n `;
   cart.forEach(item => {
-     mensajePedido += `${item.name} - $${item.price}\n ` 
+     mensajePedido += `${item.name} - $${item.price}\n `   
+     
   });
  
- // mensajePedido += `\nTotal: $${totalCarrito.toFixed(2)}\nSala: ${salaSeleccionada}\nUbicación: ${ubicacion}`;
+ 
 
   // Enviar el pedido a través de WhatsApp
   const numeroWhatsApp = '2364265933'; // Reemplaza con tu número de WhatsApp

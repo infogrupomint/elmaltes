@@ -5,12 +5,36 @@ body {
   padding: 0;
 }
 
-.categories {
-  margin-bottom: 20px;
+
+.categorias-btn{
+  display: inline-flex;
+  margin: 2px;
+  align-items: center;
+  justify-content: center;
+  width: 48%;
+  height: 80px;
+  background-color: #141414;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: .3s ease all;
+  border-radius: 10px;
 }
 
+.categorias-btn:hover{
+  background: #ccc;
+}
+
+
+
+
+
 .menu {
-  display: grid;
+  display: block;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
 }
@@ -29,8 +53,22 @@ body {
 }
 
 .cart {
-  float: right;
-  width: 300px;
-  padding: 20px;
-  border: 1px solid #ccc;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #141414;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: .3s ease all;
+  border-radius: 10px;
+}
+
+.enviarBtn{
+  background-color: aqua;
 }
