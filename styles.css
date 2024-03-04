@@ -6,13 +6,45 @@ body {
   padding: 0;
 }
 
-header{
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #333;
+  color: white;
+  font-family: "Sansita Swashed", system-ui;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  width: 50px; /* Ajusta el tamaño del logo según sea necesario */
+  margin-right: 10px;
+}
+
+.cart-btn-h button {
+  padding: 10px 20px;
+  background-color: #ff4500; /* Color de fondo del botón */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cart-btn-h button:hover {
+  background-color: #ff7f50; /* Cambia el color de fondo del botón al pasar el ratón */
+}
+/*header{
   color: #fff;
   text-align: center;
   background-color: #141414;
   font-family: "Lobster", sans-serif;
 
-}
+}*/
 
 /*.categorias-btn{
   display: inline-block;
@@ -47,6 +79,28 @@ header{
   height: 50px; /* Establece la altura deseada */
   margin: 5px; /* Margen entre los botones */
   text-align: center; /* Centra el texto dentro del botón */
+  padding: 10px 20px; /* Espacio interno del botón */
+  background-color: #131313; /* Color de fondo del botón */
+  color: #fff; /* Color del texto del botón */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cursor tipo puntero al pasar sobre el botón */
+  font-size: 16px; /* Tamaño de fuente */
+  font-weight: bold; /* Negrita */
+  text-transform: uppercase; /* Texto en mayúsculas */
+  margin: 5px; /* Margen entre los botones */
+}
+
+.categorias-btn:hover {
+  background-color: #d63a2f; /* Cambio de color de fondo al pasar el ratón */
+}
+
+.categorias-btn:focus {
+  outline: none; /* Elimina el contorno al hacer foco en el botón */
+}
+
+.categorias-btn:active {
+  transform: translateY(1px); /* Efecto de hundimiento al hacer clic en el botón */
 }
 
 
