@@ -78,7 +78,7 @@ function filterCategory(category) {
     <div class="product">
     <h3>${product.name}</h3>
     <div class="details">
-      <p>Precio: $${product.price}</p>
+      <p>$${product.price}</p>
       <button class="btnAgregarCarrito" onclick="addToCart('${product.name}', ${product.price})">Agregar al carrito</button>
     </div>
     `;
