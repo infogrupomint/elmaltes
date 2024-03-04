@@ -110,12 +110,12 @@ background-color: #f0c22b;
   .categorias-btn{
     width: 24%;
     height: 40px;
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .product {
     height: 30px;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Bebas Neue", sans-serif;
     font-size: 15px;
     font-weight: 500;
     justify-content: center;
