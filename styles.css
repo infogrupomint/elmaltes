@@ -14,7 +14,7 @@ header{
 
 }
 
-.categorias-btn{
+/*.categorias-btn{
   display: inline-block;
   margin: 2px;
   align-items: center;
@@ -36,6 +36,17 @@ header{
 .categorias-btn:hover{
   color: #141414;
   background: #ccc;
+}*/
+#categories {
+  display: flex; /* Usa flexbox */
+  flex-wrap: wrap; /* Envuelve los elementos en múltiples líneas si no caben en una sola línea */
+  justify-content: center; /* Centra los elementos horizontalmente */
+}
+.categorias-btn {
+  width: 150px; /* Establece el ancho deseado */
+  height: 50px; /* Establece la altura deseada */
+  margin: 5px; /* Margen entre los botones */
+  text-align: center; /* Centra el texto dentro del botón */
 }
 
 
@@ -45,46 +56,52 @@ header{
   grid-gap: 20px;
 }
 
+
 .product {
-  font-family: "Bebas Neue", sans-serif;
-  font-size: 20px;
-  font-weight: 500;
-  justify-content: center;
-  border-radius: 10px;
-  background-color: #af2323;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ccc;
   padding: 10px;
-  border: 1px solid #ffffff;
-  margin: 5px 
-}
-
-.product h3  {
-display: inline-block;
-text-align: left;
-}
-
-.product p  {
-  display: inline;
-
-}
-
-
-
-.btnAgregarCarrito  {
-font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-font-size: 20px;
-float: right;
-border-radius: 10px;
-background-color: #f0c22b;
-}
-  
-
-.product img {
-  max-width: 100%;
+  margin-bottom: 10px;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20px;
+  background-color: #f0492b;
+  border-radius: 10px;
 }
 
 .product h3 {
-  margin-top: 0;
+  margin: 2px;
 }
+
+.product p {
+  margin-right: 10px;
+}
+
+.details {
+  display: flex;
+  align-items: center;
+}
+
+.btnAgregarCarrito {
+  background-color: #FFD700; /* Color de fondo dorado */
+  color: #fff; /* Color del texto blanco */
+  padding: 10px 20px; /* Espaciado interno */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  font-size: 16px; /* Tamaño de fuente */
+  cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+  transition: background-color 0.3s ease; /* Transición suave para el cambio de color de fondo */
+}
+
+.btnAgregarCarrito:hover {
+  background-color: #FFA500; /* Cambiar color de fondo al pasar el cursor */
+}
+
+.btnAgregarCarrito:active {
+  background-color: #FF8C00; /* Cambiar color de fondo al hacer clic */
+}
+
 
 .cart {
   display: inline-flex;
@@ -107,27 +124,65 @@ background-color: #f0c22b;
 }
 
 @media only screen and (max-width: 500px){
-  .categorias-btn{
-    width: 24%;
-    height: 40px;
-    font-size: 18px;
-  }
+
 
   .product {
-    height: 30px;
-    font-family: "Bebas Neue", sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ccc;
+    padding: 2px;
+    margin-bottom: 2px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size: 15px;
-    font-weight: 500;
-    justify-content: center;
+    background-color: #f0492b;
     border-radius: 10px;
-    background-color: #af2323;
-    padding: 10px;
-    border: 1px solid #ffffff;
-    margin: 5px 
   }
-  .btnAgregarCarrito  {
-    font-size: 15px;
-    border-radius: 10px;
-    background-color: #f0c22b;
-    }
+  
+  .product h3 {
+    margin: 2px;
+    font-size: 18px;
+  }
+  
+  .product p {
+    margin-right: 2px;
+  }
+  
+  .details {
+    display: flex;
+    align-items: center;
+  }
+  
+  .btnAgregarCarrito {
+    background-color: #FFD700; /* Color de fondo dorado */
+    color: #fff; /* Color del texto blanco */
+    height: 40px;
+    width: 120px;
+    padding: 2px 2px; /* Espaciado interno */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 15px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    transition: background-color 0.3s ease; /* Transición suave para el cambio de color de fondo */
+  }
+  
+  .btnAgregarCarrito:hover {
+    background-color: #FFA500; /* Cambiar color de fondo al pasar el cursor */
+  }
+  
+  .btnAgregarCarrito:active {
+    background-color: #FF8C00; /* Cambiar color de fondo al hacer clic */
+  }
+
+  #categories {
+    display: flex; /* Usa flexbox */
+    flex-wrap: wrap; /* Envuelve los elementos en múltiples líneas si no caben en una sola línea */
+    justify-content: center; /* Centra los elementos horizontalmente */
+  }
+  .categorias-btn {
+    width: 150px; /* Establece el ancho deseado */
+    height: 50px; /* Establece la altura deseada */
+    margin: 5px; /* Margen entre los botones */
+    text-align: center; /* Centra el texto dentro del botón */
+  }
 }
