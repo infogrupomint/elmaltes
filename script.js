@@ -3,50 +3,50 @@ const categories = ['Pizzas', 'Empanadas', 'Canastitas', 'Sandwiches'];
 
 const products = {
   'Pizzas': [
-    { name: 'Pizza Muzzarella', price: 5000 },
-    { name: 'Pizza Especial', price: 7200 },
-    { name: 'Pizza Cebolla', price: 6500 },
-    { name: 'Pizza Napolitana', price: 7500 },
-    { name: 'Pizza Capresse', price: 6500 },
-    { name: 'Pizza Papas Fritas', price: 7200 },
-    { name: 'Pizza Papas Fritas c/Salame', price: 7200 },
-    { name: 'Pizza Provolone c/Jamon', price: 7500 },
-    { name: 'Pizza Calabresa', price: 5700 },
-    { name: 'Pizza Rucula c/ Parmesano', price: 7200 },
-    { name: 'Pizza Rucula c/ Crudo', price: 7500 },
-    { name: 'Pizza Palmitos', price: 7500 },
-    { name: 'Pizza Choclo', price: 7500 },
-    { name: 'Pizza Panceta', price: 7500 },
-    { name: 'Pizza Anana c/ Jamon', price: 7500 },
-    { name: 'Pizza Pollo', price: 7500 },
-    { name: 'Pizza Roquefort', price: 7500 },
-    { name: 'Pizza 4 Quesos', price: 7500 },
-    { name: 'Pizza Anchoas', price: 7500 },
-    { name: 'Pizza Veranito', price: 7500 },
-    { name: 'Pizza S.O.S', price: 7500 },
-    { name: 'Pizza Cordoba', price: 7500 },
+    { name: 'P. Muzzarella', price: 5000,img:"pizza.png"},
+    { name: 'P. Especial', price: 7200 },
+    { name: 'P. Cebolla', price: 6500 },
+    { name: 'P. Napolitana', price: 7500 },
+    { name: 'P. Capresse', price: 6500 },
+    { name: 'P. Papas Fritas', price: 7200 },
+    { name: 'P. Fritas c/Salame', price: 7200 },
+    { name: 'P. Provolone c/Jamon', price: 7500 },
+    { name: 'P. Calabresa', price: 5700 },
+    { name: 'P. Rucula c/ Parmesano', price: 7200 },
+    { name: 'P. Rucula c/ Crudo', price: 7500 },
+    { name: 'P. Palmitos', price: 7500 },
+    { name: 'P. Choclo', price: 7500 },
+    { name: 'P. Panceta', price: 7500 },
+    { name: 'P. Anana c/ Jamon', price: 7500 },
+    { name: 'P. Pollo', price: 7500 },
+    { name: 'P. Roquefort', price: 7500 },
+    { name: 'P. 4 Quesos', price: 7500 },
+    { name: 'P. Anchoas', price: 7500 },
+    { name: 'P. Veranito', price: 7500 },
+    { name: 'P. S.O.S', price: 7500 },
+    { name: 'P. Cordoba', price: 7500 },
 
   ],
   'Empanadas': [
-    { name: 'Empanada de Carne', price: 850 },
-    { name: 'Empanada de Pollo', price: 850 },
-    { name: 'Empanada de Jamon y Queso', price: 850 },
-    { name: 'Empanada de Choclo', price: 850 },
-    { name: 'Empanada de Cebolla', price: 850 },
-    { name: 'Empanada de Verdura', price: 850 },
+    { name: 'E. de Carne', price: 850 },
+    { name: 'E. de Pollo', price: 850 },
+    { name: 'E. de Jamon y Queso', price: 850 },
+    { name: 'E. de Choclo', price: 850 },
+    { name: 'E. de Cebolla', price: 850 },
+    { name: 'E. de Verdura', price: 850 },
   ],
   'Canastitas': [
-    { name: 'Canastita Capresse', price: 950 },
-    { name: 'Canastita Panceta y Cebolla', price: 950 },
-    { name: 'Canastita Roquefort y Nuez', price: 950 },
-    { name: 'Canastita Atun', price: 950 },
+    { name: 'C. Capresse', price: 950 },
+    { name: 'C. Panceta y Cebolla', price: 950 },
+    { name: 'C. Roquefort y Nuez', price: 950 },
+    { name: 'C. Atun', price: 950 },
   ],
   'Sandwiches': [
-    { name: 'Sandwich Milanesa Individual Completo Con Papas Fritas', price: 3500 },
-    { name: 'Sandwich Hamburguesa Individual Completo con Papas Fritas', price: 4000 },
-    { name: 'Sandwich Lomo Individual Completo con Papas Fritas', price: 5700 },
+    { name: 'Milanesa c/ Fritas', price: 3500 },
+    { name: 'Hamburguesa c/ Fritas', price: 4000 },
+    { name: 'Lomo c/ Fritas', price: 5700 },
     { name: 'Lomopizza', price: 20000 },
-    { name: 'Porcion de Papas Fritas', price: 2200 },
+    { name: 'Porcion Papas Fritas', price: 2200 },
   ]
 };
 
@@ -77,8 +77,8 @@ function filterCategory(category) {
     const productHTML = `
       <div class="product">
         <h3>${product.name} </h3>
-         <p>Precio: $${product.price}</p>
-        <button onclick="addToCart('${product.name}', ${product.price})">Agregar al carrito</button>
+         <p>|Precio: $${product.price}</p>
+        <button class="btnAgregarCarrito" onclick="addToCart('${product.name}', ${product.price})">Agregar al carrito</button>
       </div>
     `;
     menu.insertAdjacentHTML('beforeend', productHTML);
@@ -127,7 +127,7 @@ function addToCart(productName, productPrice) {
 function sendOrder() {
 
   // Formar el mensaje del pedido
-  let mensajePedido = `Pedido:\n `;
+  let mensajePedido = `Pedido:\n  ` ;
   cart.forEach(item => {
      mensajePedido += `${item.name} - $${item.price}\n `   
      

@@ -1,22 +1,30 @@
 /* Estilos CSS */
 body {
   font-family: Arial, sans-serif;
+  background-color: #fdc938;
   margin: 0;
   padding: 0;
 }
 
+header{
+  color: #fff;
+  text-align: center;
+  background-color: #141414;
+  font-family: "Lobster", sans-serif;
+
+}
 
 .categorias-btn{
-  display: inline-flex;
+  display: inline-block;
   margin: 2px;
   align-items: center;
   justify-content: center;
-  width: 48%;
+  width: 24%;
   height: 80px;
   background-color: #141414;
   color: #fff;
-  font-family: 'Roboto', sans-serif;
-  font-size: 20px;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 50px;
   font-weight: 500;
   border: none;
   cursor: pointer;
@@ -26,23 +34,49 @@ body {
 }
 
 .categorias-btn:hover{
+  color: #141414;
   background: #ccc;
 }
 
 
-
-
-
 .menu {
-  display: block;
+  color: white;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
 }
 
 .product {
-  border: 1px solid #ccc;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: #af2323;
   padding: 10px;
+  border: 1px solid #ffffff;
+  margin: 5px 
 }
+
+.product h3  {
+display: inline-block;
+text-align: left;
+}
+
+.product p  {
+  display: inline;
+
+}
+
+
+
+.btnAgregarCarrito  {
+font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-size: 20px;
+float: right;
+border-radius: 10px;
+background-color: #f0c22b;
+}
+  
 
 .product img {
   max-width: 100%;
@@ -56,7 +90,6 @@ body {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   background-color: #141414;
   color: #fff;
   font-family: 'Roboto', sans-serif;
@@ -71,4 +104,30 @@ body {
 
 .enviarBtn{
   background-color: aqua;
+}
+
+@media only screen and (max-width: 500px){
+  .categorias-btn{
+    width: 24%;
+    height: 40px;
+    font-size: 25px;
+  }
+
+  .product {
+    height: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: #af2323;
+    padding: 10px;
+    border: 1px solid #ffffff;
+    margin: 5px 
+  }
+  .btnAgregarCarrito  {
+    font-size: 15px;
+    border-radius: 10px;
+    background-color: #f0c22b;
+    }
 }
