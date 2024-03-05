@@ -3,50 +3,50 @@ const categories = ['Pizzas', 'Empanadas', 'Canastitas', 'Sandwiches'];
 
 const products = {
   'Pizzas': [
-    { name: 'P. Muzzarella', price: 5000,img:"pizza.png"},
-    { name: 'P. Especial', price: 7200 },
-    { name: 'P. Cebolla', price: 6500 },
-    { name: 'P. Napolitana', price: 7500 },
-    { name: 'P. Capresse', price: 6500 },
-    { name: 'P. Papas Fritas', price: 7200 },
-    { name: 'P. Fritas c/Salame', price: 7200 },
-    { name: 'P. Provolone c/Jamon', price: 7500 },
-    { name: 'P. Calabresa', price: 5700 },
-    { name: 'P. Rucula c/ Parmesano', price: 7200 },
-    { name: 'P. Rucula c/ Crudo', price: 7500 },
-    { name: 'P. Palmitos', price: 7500 },
-    { name: 'P. Choclo', price: 7500 },
-    { name: 'P. Panceta', price: 7500 },
-    { name: 'P. Anana c/ Jamon', price: 7500 },
-    { name: 'P. Pollo', price: 7500 },
-    { name: 'P. Roquefort', price: 7500 },
-    { name: 'P. 4 Quesos', price: 7500 },
-    { name: 'P. Anchoas', price: 7500 },
-    { name: 'P. Veranito', price: 7500 },
-    { name: 'P. S.O.S', price: 7500 },
-    { name: 'P. Cordoba', price: 7500 },
+    { name: 'P. Muzzarella', price: 5000, quanty:1},
+    { name: 'P. Especial', price: 7200, quanty:1 },
+    { name: 'P. Cebolla', price: 6500, quanty:1 },
+    { name: 'P. Napolitana', price: 7500, quanty:1 },
+    { name: 'P. Capresse', price: 6500, quanty:1 },
+    { name: 'P. Papas Fritas', price: 7200, quanty:1 },
+    { name: 'P. Fritas c/Salame', price: 7200, quanty:1 },
+    { name: 'P. Provolone c/Jamon', price: 7500, quanty:1 },
+    { name: 'P. Calabresa', price: 5700, quanty:1 },
+    { name: 'P. Rucula c/ Parmesano', price: 7200, quanty:1 },
+    { name: 'P. Rucula c/ Crudo', price: 7500, quanty:1 },
+    { name: 'P. Palmitos', price: 7500, quanty:1 },
+    { name: 'P. Choclo', price: 7500, quanty:1 },
+    { name: 'P. Panceta', price: 7500, quanty:1 },
+    { name: 'P. Anana c/ Jamon', price: 7500, quanty:1 },
+    { name: 'P. Pollo', price: 7500, quanty:1 },
+    { name: 'P. Roquefort', price: 7500, quanty:1 },
+    { name: 'P. 4 Quesos', price: 7500, quanty:1 },
+    { name: 'P. Anchoas', price: 7500, quanty:1 },
+    { name: 'P. Veranito', price: 7500, quanty:1 },
+    { name: 'P. S.O.S', price: 7500, quanty:1 },
+    { name: 'P. Cordoba', price: 7500, quanty:1 },
 
   ],
   'Empanadas': [
-    { name: 'E. de Carne', price: 850 },
-    { name: 'E. de Pollo', price: 850 },
-    { name: 'E. de Jamon y Queso', price: 850 },
-    { name: 'E. de Choclo', price: 850 },
-    { name: 'E. de Cebolla', price: 850 },
-    { name: 'E. de Verdura', price: 850 },
+    { name: 'E. de Carne', price: 850, quanty:1 },
+    { name: 'E. de Pollo', price: 850, quanty:1 },
+    { name: 'E. de Jamon y Queso', price: 850, quanty:1 },
+    { name: 'E. de Choclo', price: 850, quanty:1 },
+    { name: 'E. de Cebolla', price: 850, quanty:1 },
+    { name: 'E. de Verdura', price: 850, quanty:1 },
   ],
   'Canastitas': [
-    { name: 'C. Capresse', price: 950 },
-    { name: 'C. Panceta y Cebolla', price: 950 },
-    { name: 'C. Roquefort y Nuez', price: 950 },
-    { name: 'C. Atun', price: 950 },
+    { name: 'C. Capresse', price: 950, quanty:1 },
+    { name: 'C. Panceta y Cebolla', price: 950, quanty:1 },
+    { name: 'C. Roquefort y Nuez', price: 950, quanty:1 },
+    { name: 'C. Atun', price: 950, quanty:1 },
   ],
   'Sandwiches': [
-    { name: 'Milanesa c/ Fritas', price: 3500 },
-    { name: 'Hamburguesa c/ Fritas', price: 4000 },
-    { name: 'Lomo c/ Fritas', price: 5700 },
-    { name: 'Lomopizza', price: 20000 },
-    { name: 'Porcion Papas Fritas', price: 2200 },
+    { name: 'Milanesa c/ Fritas', price: 3500, quanty:1 },
+    { name: 'Hamburguesa c/ Fritas', price: 4000, quanty:1 },
+    { name: 'Lomo c/ Fritas', price: 5700, quanty:1 },
+    { name: 'Lomopizza', price: 20000, quanty:1 },
+    { name: 'Porcion Papas Fritas', price: 2200, quanty:1 },
   ]
 };
 
@@ -75,10 +75,10 @@ function filterCategory(category) {
 
   products[category].forEach(product => {
     const productHTML = `
-    <div class="product">
+    <div class="productInicio">
     <h3>${product.name}</h3>
     <div class="details">
-      <p>$${product.price}</p>
+      <p>Precio: $${product.price}</p>
       <button class="btnAgregarCarrito" onclick="addToCart('${product.name}', ${product.price})">Agregar al carrito</button>
     </div>
     `;
@@ -90,11 +90,12 @@ function filterCategory(category) {
 let cart = [];
 
 // Función para agregar productos al carrito
-function addToCart(productName, productPrice) {
+function addToCart(productName, productPrice, productQuanty) {
   // Crear un objeto que representa el producto seleccionado
   const product = {
     name: productName,
-    price: productPrice
+    price: productPrice,
+    quanty: productQuanty
   };
 
   // Agregar el producto al carrito
@@ -130,11 +131,10 @@ function sendOrder() {
   // Formar el mensaje del pedido
   let mensajePedido = `Pedido:\n  ` ;
   cart.forEach(item => {
-     mensajePedido += `${item.name} - $${item.price}\n `   
-     
+     mensajePedido += `${item.name} - $${item.price}\n `        
   });
- 
- 
+
+
 
   // Enviar el pedido a través de WhatsApp
   const numeroWhatsApp = '2364265933'; // Reemplaza con tu número de WhatsApp
