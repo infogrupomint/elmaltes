@@ -129,10 +129,20 @@ function addToCart(productName, productPrice, productQuanty) {
 function sendOrder() {
 
   // Formar el mensaje del pedido
-  let mensajePedido = `Pedido:\n  ` ;
+  let mensajePedido =`----------------------------------\n`;
+  mensajePedido    += `   PEDIDO:    \n`;
+  mensajePedido +=`----------------------------------\n`;
+  let total = 0; // Inicializa una variable para almacenar el total
+  
   cart.forEach(item => {
-     mensajePedido += `${item.name} - $${item.price}\n `        
+      mensajePedido += ` ${item.name} - $${item.price}\n`;
+      total += item.price; // Agrega el precio del artículo al total
   });
+  
+  mensajePedido +=`----------------------------------\n`;
+  mensajePedido += `Total: $${total}\n`; // Agrega una línea para mostrar el total
+  mensajePedido +=`----------------------------------\n`;
+  
 
 
 

@@ -45,12 +45,12 @@ const displayCart = () =>{
         modalBody.className = "modal-body";
         modalBody.innerHTML = `
         <div class = "product">
-        <div class = "product-info">
-       <h4>${product.name}</h4>
+           <div class = "product-info">
+             <h4>${product.name}</h4>
+           </div>
+           <div class="price">${product.price}  $</div>
+           <div class = "delete-product">✖️​</div>
         </div>
-    <div class="price">${product.price}  $</div>
-    <div class = "delete-product">❌</div>
-   </div>
         `;
         modalContainer.append(modalBody);
 
