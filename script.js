@@ -118,6 +118,8 @@ function sendOrder() {
   
 
 
+    const salaSeleccionada = document.getElementById('sala').value;
+    const ubicacion = document.getElementById('ubicacion').value;
   cart.forEach(item => {
       mensajePedido += ` ${item.name} - $${item.price}\n`;
       total += item.price; // Agrega el precio del artículo al total
@@ -134,7 +136,7 @@ function sendOrder() {
 
 
   // Enviar el pedido a través de WhatsApp
-  const numeroWhatsApp = '+5492364266611'; // Reemplaza con tu número de WhatsApp
+  const numeroWhatsApp = '+5492364265933'; // Reemplaza con tu número de WhatsApp
   const enlaceWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensajePedido)}`;
 
   // Abrir WhatsApp en una nueva pestaña
