@@ -101,14 +101,8 @@ function addToCart(productName, productPrice, productQuanty) {
   // Agregar el producto al carrito
   cart.push(product);
 
-
-
- 
-
   // Recorrer la lista de productos en el carrito y actualizar la interfaz de usuario
   let total = 0;
-
-
 
 }
 
@@ -116,18 +110,28 @@ function addToCart(productName, productPrice, productQuanty) {
 // Función para enviar el pedido por WhatsApp
 function sendOrder() {
 
+  const salaSeleccionada = document.getElementById('sala').value;
+  const ubicacion = document.getElementById('ubicacion').value;
+
   // Formar el mensaje del pedido
+
+
   let mensajePedido =`----------------------------------\n`;
   mensajePedido    += `   PEDIDO:    \n`;
   let total = 0; // Inicializa una variable para almacenar el total
   
+
+
   cart.forEach(item => {
       mensajePedido += ` ${item.name} - $${item.price}\n`;
       total += item.price; // Agrega el precio del artículo al total
   });
+
   
   mensajePedido +=`----------------------------------\n`;
   mensajePedido += `Total: $${total}\n`; // Agrega una línea para mostrar el total
+  mensajePedido +=`----------------------------------\n`;
+  mensajePedido += `${salaSeleccionada}\n ${ubicacion}\n`;
   mensajePedido +=`----------------------------------\n`;
   
 

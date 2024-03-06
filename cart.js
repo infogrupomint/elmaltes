@@ -64,7 +64,7 @@ const displayCart = () =>{
     });
 
     //modal footer
-
+ 
     // Función para calcular el total de los precios
     function calcularTotal(cart) {
     var total = 0;
@@ -73,16 +73,28 @@ const displayCart = () =>{
     }
     return total;
     }
-
-    // Calcular el total de los precios
-    var totalPrecio = calcularTotal(cart);
-
     
+    // Calcular el total de los precios
+    var totalPrecio = calcularTotal(cart);   
 
     const modalFooter = document.createElement("div");
     modalFooter.className = "modal-footer";
     modalFooter.innerHTML = `
     <div class = "total-price">Total: $${totalPrecio} </div>
+
+    <section class="metodo" id="sala-ubicacion">
+    <h4>METODO DE ENTREGA</h4>
+    <select id="sala"> 
+        <option value="Retiro">Retiro en Local</option>
+        <option value="Envio">Envio a Domicilio</option>
+    </select>
+    
+    <br>
+    
+    <input type="text" id="ubicacion" placeholder="Nombre | Direccion de envio">
+
+    </section>
+
     <button class = "btn-primary" id = "checkout-btn" onclick="sendOrder()">Enviar Pedido</button>
     <div id = "button-checkout"></div>
     `;

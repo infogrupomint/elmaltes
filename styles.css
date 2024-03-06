@@ -439,3 +439,35 @@ header {
   max-height: 80vh;
   overflow-y: auto;
 }
+
+#sala-ubicacion {
+  margin-top: 10px;
+  text-align: center;
+  font-family: sans-serif;
+  color: hsl(0, 0%, 15%); /* Cambia el color del texto según tus preferencias */
+  background-size: cover; /* Ajusta el tamaño de la imagen para cubrir todo el fondo */
+  background-position: center; /* Centra la imagen en el fondo */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  background-color: #d6482f;
+  border-radius: 15px;
+
+}
+
+
+#sala, #ubicacion {
+  color: #141414;
+  margin-bottom: 10px;
+  display: inline-block;
+  padding: 5px 10px;
+  font-size: 16px;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #e0e0e0;
+}
+
+.metodo h4{
+  padding-top: 10px;
+}
