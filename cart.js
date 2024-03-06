@@ -84,7 +84,7 @@ const displayCart = () =>{
 
     <section class="metodo" id="sala-ubicacion">
     <h4>METODO DE ENTREGA</h4>
-    <select id="sala"> 
+    <select id="salaSeleccionada"> 
         <option value="Retiro">Retiro en Local</option>
         <option value="Envio">Envio a Domicilio</option>
     </select>
