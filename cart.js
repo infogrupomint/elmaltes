@@ -48,7 +48,7 @@ const displayCart = () =>{
            <div class = "product-info">
              <h4>${product.name}</h4>
            </div>
-           <div class="price">${product.price}  $</div>
+           <div class="price">$${product.price}</div>
            <div class = "delete-product">✖️​</div>
         </div>
         `;
