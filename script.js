@@ -101,27 +101,15 @@ function addToCart(productName, productPrice, productQuanty) {
   // Agregar el producto al carrito
   cart.push(product);
 
-  // Actualizar la interfaz de usuario para mostrar el carrito
-  const cartItemsElement = document.getElementById('cart-items');
-  const cartTotalElement = document.getElementById('cart-total');
 
-  // Limpiar el contenido previo del carrito
-  cartItemsElement.innerHTML = '';
 
  
 
   // Recorrer la lista de productos en el carrito y actualizar la interfaz de usuario
   let total = 0;
-  cart.forEach(item => {
-    const listItem = document.createElement('li');
-    listItem.className="lista-carrito";
-    listItem.textContent = `${item.name} - $${item.price} \n`;
-    cartItemsElement.appendChild(listItem);
-    total += item.price;
-  });
 
-  // Actualizar el total del carrito
-  cartTotalElement.textContent = `$${total.toFixed(2)}`;
+
+
 }
 
 
@@ -131,7 +119,6 @@ function sendOrder() {
   // Formar el mensaje del pedido
   let mensajePedido =`----------------------------------\n`;
   mensajePedido    += `   PEDIDO:    \n`;
-  mensajePedido +=`----------------------------------\n`;
   let total = 0; // Inicializa una variable para almacenar el total
   
   cart.forEach(item => {
