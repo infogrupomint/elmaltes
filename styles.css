@@ -395,8 +395,8 @@ header {
 }
 
 .btn-primary {
-  background-color: #007bff;
-  border-color: #007bff;
+  background-color: #36c429;
+  border-color: #36c429;
   color: #ffffff;
   font-size: 14px;
   font-weight: bold;
@@ -404,11 +404,12 @@ header {
   text-transform: uppercase;
   transition: background-color 0.3s ease;
   cursor: pointer;
+  border-radius: 15px;
 }
 
 .btn-primary:hover{
-  background-color: #0069d9;
-  border-color: #0062cc;
+  background-color: #226d1b;
+  border-color: #226d1b;
 }
 
 
