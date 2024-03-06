@@ -110,11 +110,7 @@ function addToCart(productName, productPrice, productQuanty) {
 // Función para enviar el pedido por WhatsApp
 function sendOrder() {
 
-  const salaSeleccionada = document.getElementById('sala').value;
-  const ubicacion = document.getElementById('ubicacion').value;
-
   // Formar el mensaje del pedido
-
 
   let mensajePedido =`----------------------------------\n`;
   mensajePedido    += `   PEDIDO:    \n`;

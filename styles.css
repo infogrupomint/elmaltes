@@ -471,3 +471,14 @@ header {
 .metodo h4{
   padding-top: 10px;
 }
+
+footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
