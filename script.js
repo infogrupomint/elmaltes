@@ -91,12 +91,12 @@ function filterCategory(category) {
 let cart = [];
 
 // Función para agregar productos al carrito
-function addToCart(productName, productPrice, productQuanty) {
+function addToCart(productName, productPrice, productQuanty,) {
   // Crear un objeto que representa el producto seleccionado
   const product = {
     name: productName,
     price: productPrice,
-    quanty: productQuanty
+    quanty: productQuanty,
   };
 
   //Ponemos un mensaje de 2 segundos cada vez que se aprete el boton Agregar al carrito
