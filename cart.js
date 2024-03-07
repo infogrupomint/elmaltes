@@ -75,16 +75,18 @@ const displayCart = () =>{
     }
     
     // Calcular el total de los precios
-    var totalPrecio = calcularTotal(cart);   
+    var totalPrecio = calcularTotal(cart); 
+    envio += totalPrecio;
+
 
     const modalFooter = document.createElement("div");
     modalFooter.className = "modal-footer";
     modalFooter.innerHTML = `
-    <div class = "total-price">Total: $${totalPrecio} </div>
+    <div class = "total-price" id = "button-checkout">Total: $${totalPrecio} </div>
 
     <section class="metodo" id="sala-ubicacion">
     <h4>METODO DE ENTREGA</h4>
-    <select id="sala"> 
+    <select id="sala" onchange="actualizarTotal()"> 
         <option value="Retiro">Retiro en Local</option>
         <option value="Envio">Envio a Domicilio</option>
     </select>
