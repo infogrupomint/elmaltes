@@ -84,6 +84,7 @@ function filterCategory(category) {
     `;
     menu.insertAdjacentHTML('beforeend', productHTML);
   });
+
 }
 
 // Array para almacenar los productos seleccionados en el carrito
@@ -97,6 +98,17 @@ function addToCart(productName, productPrice, productQuanty) {
     price: productPrice,
     quanty: productQuanty
   };
+
+  //Ponemos un mensaje de 2 segundos cada vez que se aprete el boton Agregar al carrito
+  const mensaje = document.createElement('div');
+  mensaje.textContent = 'Añadido al Carrito';
+  mensaje.classList.add('mensajeTemporal');
+  document.body.appendChild(mensaje);
+
+  // Después de 2 segundos, eliminamos el mensaje temporal
+  setTimeout(() => {
+    mensaje.remove();
+  }, 1200);
 
   // Agregar el producto al carrito
   cart.push(product);

@@ -88,7 +88,7 @@ const displayCart = () =>{
     <h4>METODO DE ENTREGA</h4>
     <select id="sala" onchange="actualizarTotal()"> 
         <option value="Retiro">Retiro en Local</option>
-        <option value="Envio">Envio a Domicilio</option>
+        <option value="*Tarifa de envio incluida en el Total \n ----------------------------------\nEnvio a:">Envio a Domicilio</option>
     </select>
     
     <br>

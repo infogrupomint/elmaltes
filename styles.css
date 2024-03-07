@@ -183,6 +183,10 @@ header {
 
 @media only screen and (max-width: 500px){
 
+  .mensajeTemporal {
+    top: 350px; /* Ajusta esta altura según la altura de tu header */
+  }
+
 
   .productInicio {
     display: flex;
@@ -481,4 +485,19 @@ footer {
   bottom: 0;
   left: 0;
   width: 100%;
+}
+
+.mensajeTemporal {
+  position: fixed;
+  top: 140px; /* Ajusta esta altura según la altura de tu header */
+  left: 50%;
+  color: #ccc;
+  font-style: oblique;
+  transform: translateX(-50%);
+  background-color: #292cda;
+  border: 1px solid #383838;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
 }
