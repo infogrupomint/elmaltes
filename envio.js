@@ -10,5 +10,4 @@ function actualizarTotal() {
     } else {envio -= 1000};
     
     document.getElementById("button-checkout").innerText = "Total: $" + envio;
-    document.getElementById("detalleEnvio").innerText = "Envio $1000";
 }

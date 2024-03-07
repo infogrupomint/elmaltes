@@ -108,7 +108,7 @@ function addToCart(productName, productPrice, productQuanty) {
   // Después de 2 segundos, eliminamos el mensaje temporal
   setTimeout(() => {
     mensaje.remove();
-  }, 1200);
+  }, 500);
 
   // Agregar el producto al carrito
   cart.push(product);

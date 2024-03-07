@@ -491,8 +491,8 @@ footer {
   position: fixed;
   top: 140px; /* Ajusta esta altura según la altura de tu header */
   left: 50%;
-  color: #ccc;
-  font-style: oblique;
+  color: #ffffff;
+  font-weight: bold;
   transform: translateX(-50%);
   background-color: #292cda;
   border: 1px solid #383838;
