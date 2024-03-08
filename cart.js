@@ -27,6 +27,9 @@ const displayCart = () =>{
     modalHeader.append(modalClose);
 
     modalClose.addEventListener("click", () => {
+        cart = [];
+        envio = 0;
+        totalPrecio = 0;
         modalContainer.style.display = "none";
         modalOverlay.style.display = "none";
     })
@@ -75,7 +78,7 @@ const displayCart = () =>{
     }
     
     // Calcular el total de los precios
-    var totalPrecio = calcularTotal(cart); 
+    let totalPrecio = calcularTotal(cart); 
     envio += totalPrecio;
 
 
@@ -122,6 +125,17 @@ const deleteCartProduct = (id) => {
     const foundId = cart.findIndex((element) => element.id === id);
     cart.splice(foundId, 1);
     displayCart();
+    displayCartCounter();
+};
+
+const displayCartCounter = () => {
+    const cartLength = cart.reduce((acc, el) => acc + el.quanty, 0);
+    if (cartLength > 0) {
+        cartCounter.style.display = "block";
+        cartCounter.innerText = cartLength;
+    }else{
+        cartCounter.style.display = "none";
+    }
 
 };
 
