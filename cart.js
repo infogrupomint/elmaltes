@@ -30,6 +30,8 @@ const displayCart = () =>{
         cart = [];
         envio = 0;
         totalPrecio = 0;
+        removedPrecios = 0;
+        removedPrice = 0;
         modalContainer.style.display = "none";
         modalOverlay.style.display = "none";
     })
@@ -80,6 +82,7 @@ const displayCart = () =>{
     // Calcular el total de los precios
     let totalPrecio = calcularTotal(cart); 
     envio += totalPrecio;
+    envio -= removedPrecios;
 
 
     const modalFooter = document.createElement("div");
@@ -121,28 +124,37 @@ const displayCart = () =>{
 
 cartBtn.addEventListener("click", displayCart);
 
+let removedPrecios = 0;
+
 const deleteCartProduct = (id) => {
     const foundId = cart.findIndex((element) => element.id === id);
-    cart.splice(foundId, 1);
-    displayCart();
-    displayCartCounter();
-};
-
-const displayCartCounter = () => {
-    const cartLength = cart.reduce((acc, el) => acc + el.quanty, 0);
-    if (cartLength > 0) {
-        cartCounter.style.display = "block";
-        cartCounter.innerText = cartLength;
-    }else{
-        cartCounter.style.display = "none";
+    if (foundId !== -1) {
+        const removedProduct = cart[foundId];
+        const removedPrice = removedProduct.price; // Restar el precio del producto eliminado de 'envio'
+        //console.log(removedPrice);
+        removedPrecios += removedPrice;
+        cart.splice(foundId, 1);
+        displayCart(); // Actualizar la visualización del carrito
+    } else {
+        console.log("El producto no se encontró en el carrito.");
     }
-
 };
 
+//const displayCartCounter = () => {
+//    const cartLength = cart.reduce((acc, el) => acc + el.quantity, 0);
+//    if (cartLength > 0) {
+//        cartCounter.style.display = "block";
+//        cartCounter.innerText = cartLength;
+//    }else{
+//        cartCounter.style.display = "none";
+//    }
+
+//};
 
 
 
 
+ 
 
 
 
