@@ -1,5 +1,5 @@
 // Datos de ejemplo de productos agrupados por categorías
-const categories = ['Pizzas', 'Empanadas', 'Canastitas', 'Sandwiches'];
+const categories = ['Pizzas', '1/2 Pizza', 'Empanadas', 'Canastitas', 'Sandwiches'];
 
 const products = {
   'Pizzas': [
@@ -27,26 +27,53 @@ const products = {
     { id: 22, name: 'P. Cordoba', price: 7500, quantity:1 },
 
   ],
+
+  '1/2 Pizza': [
+    { id: 23, name: '1/2 P. Muzzarella', price: 2500, quantity: 1,},
+    { id: 24, name: '1/2 P. Especial', price: 3600, quantity: 1, },
+    { id: 25, name: '1/2 P. Cebolla', price: 3250, quantity:1 },
+    { id: 26, name: '1/2 P. Napolitana', price: 3750, quantity:1 },
+    { id: 27, name: '1/2 P. Capresse', price: 3250, quantity:1 },
+    { id: 28, name: '1/2 P. Papas Fritas', price: 3600, quantity:1 },
+    { id: 29, name: '1/2 P. Fritas c/Salame', price: 3600, quantity:1 },
+    { id: 30, name: '1/2 P. Provolone c/Jamon', price: 3750, quantity:1 },
+    { id: 31, name: '1/2 P. Calabresa', price: 2850, quantity:1 },
+    { id: 32, name: '1/2 P. Rucula c/ Parmesano', price: 3600, quantity:1 },
+    { id: 33, name: '1/2 P. Rucula c/ Crudo', price: 3750, quantity:1 },
+    { id: 34, name: '1/2 P. Palmitos', price: 3750, quantity:1 },
+    { id: 35, name: '1/2 P. Choclo', price: 3750, quantity:1 },
+    { id: 36, name: '1/2 P. Panceta', price: 3750, quantity:1 },
+    { id: 37, name: '1/2 P. Anana c/ Jamon', price: 3750, quantity:1 },
+    { id: 38, name: '1/2 P. Pollo', price: 3750, quantity:1 },
+    { id: 39, name: '1/2 P. Roquefort', price: 3750, quantity:1 },
+    { id: 40, name: '1/2 P. 4 Quesos', price: 3750, quantity:1 },
+    { id: 41, name: '1/2 P. Anchoas', price: 3750, quantity:1 },
+    { id: 42, name: '1/2 P. Veranito', price: 3750, quantity:1 },
+    { id: 43, name: '1/2 P. S.O.S', price: 3750, quantity:1 },
+    { id: 44, name: '1/2 P. Cordoba', price: 3750, quantity:1 },
+
+  ],
+
   'Empanadas': [
-    { id: 23, name: 'E. de Carne', price: 850, quantity:1 },
-    { id: 24, name: 'E. de Pollo', price: 850, quantity:1 },
-    { id: 25, name: 'E. de Jamon y Queso', price: 850, quantity:1 },
-    { id: 26, name: 'E. de Choclo', price: 850, quantity:1 },
-    { id: 27, name: 'E. de Cebolla', price: 850, quantity:1 },
-    { id: 28, name: 'E. de Verdura', price: 850, quantity:1 },
+    { id: 45, name: 'E. de Carne', price: 850, quantity:1 },
+    { id: 46, name: 'E. de Pollo', price: 850, quantity:1 },
+    { id: 47, name: 'E. de Jamon y Queso', price: 850, quantity:1 },
+    { id: 48, name: 'E. de Choclo', price: 850, quantity:1 },
+    { id: 49, name: 'E. de Cebolla', price: 850, quantity:1 },
+    { id: 50, name: 'E. de Verdura', price: 850, quantity:1 },
   ],
   'Canastitas': [
-    { id: 29, name: 'C. Capresse', price: 950, quantity:1 },
-    { id: 30, name: 'C. Panceta y Cebolla', price: 950, quantity:1 },
-    { id: 31, name: 'C. Roquefort y Nuez', price: 950, quantity:1 },
-    { id: 32, name: 'C. Atun', price: 950, quantity:1 },
+    { id: 51, name: 'C. Capresse', price: 950, quantity:1 },
+    { id: 52, name: 'C. Panceta y Cebolla', price: 950, quantity:1 },
+    { id: 53, name: 'C. Roquefort y Nuez', price: 950, quantity:1 },
+    { id: 54, name: 'C. Atun', price: 950, quantity:1 },
   ],
   'Sandwiches': [
-    { id: 33, name: 'Milanesa c/ Fritas', price: 3500, quantity:1 },
-    { id: 34, name: 'Hamburguesa c/ Fritas', price: 4000, quantity:1 },
-    { id: 35, name: 'Lomo c/ Fritas', price: 5700, quantity:1 },
-    { id: 36, name: 'Lomopizza', price: 20000, quantity:1 },
-    { id: 37, name: 'Porcion Papas Fritas', price: 2200, quantity:1 },
+    { id: 55, name: 'Milanesa c/ Fritas', price: 3500, quantity:1 },
+    { id: 56, name: 'Hamburguesa c/ Fritas', price: 4000, quantity:1 },
+    { id: 57, name: 'Lomo c/ Fritas', price: 5700, quantity:1 },
+    { id: 58, name: 'Lomopizza', price: 20000, quantity:1 },
+    { id: 59, name: 'Porcion Papas Fritas', price: 2200, quantity:1 },
   ]
 };
 
