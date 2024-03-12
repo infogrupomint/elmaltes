@@ -7,6 +7,9 @@ const cartBtn = document.getElementById("cart-btn-h");
 const cartCounter = document.getElementById("cart-counter");
 
 const verConsola = document.getElementById("verConsola");
+let totalPrecio;
+
+
 
 
 const displayCart = () =>{
@@ -28,12 +31,13 @@ const displayCart = () =>{
 
     modalClose.addEventListener("click", () => {
         cart = [];
-        envio = 0;
+        
         totalPrecio = 0;
         removedPrecios = 0;
         removedPrice = 0;
         modalContainer.style.display = "none";
         modalOverlay.style.display = "none";
+    
     })
 
     const modalTitle = document.createElement("div");
@@ -80,11 +84,9 @@ const displayCart = () =>{
     }
     
     // Calcular el total de los precios
-    let totalPrecio = calcularTotal(cart); 
-    envio += totalPrecio;
-    envio -= removedPrecios;
-
-
+    totalPrecio = calcularTotal(cart); 
+    
+    
     const modalFooter = document.createElement("div");
     modalFooter.className = "modal-footer";
     modalFooter.innerHTML = `
@@ -106,8 +108,13 @@ const displayCart = () =>{
     <button class = "btn-primary" id = "checkout-btn" onclick="sendOrder()">Enviar Pedido</button>
     <div id = "button-checkout"></div>
     `;
+
+    
+
     
     modalContainer.append(modalFooter);
+    
+    
 
 
 
@@ -119,26 +126,55 @@ const displayCart = () =>{
 }
 
 
-
 };
+
+    // Definición de la función para actualizar el total
+    function actualizarTotal() {
+        const selectedOption = document.getElementById("sala").value;
+        const ubicacionInput = document.getElementById("ubicacion");
+
+        if (selectedOption === "*Tarifa de envio incluida en el Total \n ----------------------------------\nEnvio a:") {
+            totalPrecio += 1000; // Sumar 1000 al precio total si se elige envío
+        } else {
+            totalPrecio -= 1000;
+            // Aquí puedes revertir la suma de 1000 si es necesario
+            // Por ejemplo, si eliges otra opción diferente al envío
+        }
+
+        // Actualizar el contenido del elemento HTML que muestra el precio total
+        document.getElementById("button-checkout").innerHTML = `Total: $${totalPrecio}`;
+
+        
+
+        
+    }
+
+
+
 
 cartBtn.addEventListener("click", displayCart);
 
+
+
 let removedPrecios = 0;
+let removedPrice = 0;
 
 const deleteCartProduct = (id) => {
     const foundId = cart.findIndex((element) => element.id === id);
     if (foundId !== -1) {
-        const removedProduct = cart[foundId];
-        const removedPrice = removedProduct.price; // Restar el precio del producto eliminado de 'envio'
-        //console.log(removedPrice);
+        let removedProduct = cart[foundId];
+        removedPrice = removedProduct.price; // Restar el precio del producto eliminado de 'envio'
+        console.log(removedPrice);
         removedPrecios += removedPrice;
         cart.splice(foundId, 1);
         displayCart(); // Actualizar la visualización del carrito
+        //return removedPrecios;
     } else {
         console.log("El producto no se encontró en el carrito.");
-    }
+    }   
 };
+
+
 
 //const displayCartCounter = () => {
 //    const cartLength = cart.reduce((acc, el) => acc + el.quantity, 0);

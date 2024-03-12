@@ -18,7 +18,7 @@ const products = {
     { id: 13, name: 'P. Choclo', price: 7500, quantity:1 },
     { id: 14, name: 'P. Panceta', price: 7500, quantity:1 },
     { id: 15, name: 'P. Anana c/ Jamon', price: 7500, quantity:1 },
-    { id: 16, name: 'P. Pollo', price: 7500, quantitity:1 },
+    { id: 16, name: 'P. Pollo', price: 7500, quantity:1 },
     { id: 17, name: 'P. Roquefort', price: 7500, quantity:1 },
     { id: 18, name: 'P. 4 Quesos', price: 7500, quantity:1 },
     { id: 19, name: 'P. Anchoas', price: 7500, quantity:1 },
@@ -138,10 +138,10 @@ function sendOrder() {
       mensajePedido += ` ${item.name} - $${item.price}\n`;
       total += item.price; // Agrega el precio del artículo al total
   });
-
+  
   
   mensajePedido +=`----------------------------------\n`;
-  mensajePedido += `Total: $${envio}\n`; // Agrega una línea para mostrar el total
+  mensajePedido += `Total: $${totalPrecio}\n`; // Agrega una línea para mostrar el total
   mensajePedido +=`----------------------------------\n`;
   mensajePedido += `${salaSeleccionada}\n ${ubicacion}\n`;
   mensajePedido +=`----------------------------------\n`;
