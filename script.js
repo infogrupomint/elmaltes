@@ -1,5 +1,5 @@
 // Datos de ejemplo de productos agrupados por categorías
-const categories = ['Pizzas', '1/2 Pizza', 'Empanadas', 'Canastitas', 'Sandwiches'];
+const categories = ['Pizzas', '1/2 Pizza', 'Empanadas', 'Canastitas', 'Sandwiches', 'Bebidas' ];
 
 const products = {
   'Pizzas': [
@@ -72,9 +72,18 @@ const products = {
     { id: 55, name: 'Milanesa c/ Fritas', price: 3500, quantity:1 },
     { id: 56, name: 'Hamburguesa c/ Fritas', price: 4000, quantity:1 },
     { id: 57, name: 'Lomo c/ Fritas', price: 5700, quantity:1 },
-    { id: 58, name: 'Lomopizza', price: 20000, quantity:1 },
+    { id: 58, name: 'Lomopizza', price: 23000, quantity:1 },
     { id: 59, name: 'Porcion Papas Fritas', price: 2200, quantity:1 },
-  ]
+  ],
+  'Bebidas': [
+    { id: 60, name: 'Coca Cola 1.5 L', price: 2200, quantity:1 },
+    { id: 61, name: 'Coca Cola Zero 1.5 L', price: 2200, quantity:1 },
+    { id: 62, name: 'Sprite 1.5 L', price: 2200, quantity:1 },
+    { id: 63, name: 'Lata Cerveza Imperial Rubia', price: 1800, quantity:1 },
+    { id: 64, name: 'Lata Cerveza Imperial Apa', price: 1800, quantity:1 },
+    { id: 65, name: 'Lata Cerveza Imperial Roja', price: 1800, quantity:1 },
+  ],
+
 };
 
 // Llamamos a la función loadCategories al cargar la página para cargar las categorías
