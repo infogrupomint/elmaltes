@@ -170,6 +170,7 @@ function sendOrder() {
 
     const salaSeleccionada = document.getElementById('sala').value;
     const ubicacion = document.getElementById('ubicacion').value;
+    const pago = document.getElementById('pago').value;
     cart.forEach(item => {
       mensajePedido += ` ${item.name} - $${item.price}\n`;
       total += item.price; // Agrega el precio del artículo al total
@@ -180,6 +181,8 @@ function sendOrder() {
   mensajePedido += `Total: $${totalPrecio}\n`; // Agrega una línea para mostrar el total
   mensajePedido +=`----------------------------------\n`;
   mensajePedido += `${salaSeleccionada}\n ${ubicacion}\n`;
+  mensajePedido +=`----------------------------------\n`;
+  mensajePedido += `${pago}\n`;
   mensajePedido +=`----------------------------------\n`;
   
 

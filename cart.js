@@ -105,6 +105,18 @@ const displayCart = () =>{
 
     </section>
 
+    <section class="metodo-pago" id="metodo-pago">
+    <h4>METODO  DE PAGO</h4>
+    <select id="pago" > 
+        <option value="Pago en Efectivo">Efectivo</option>
+        <option value="Realiza el pago mediante Transferencia al siguiente ALIAS: \n ELMALTES.JUNIN \n Por favor compartartir el comprobante de pago.">Transferencia</option>
+        <option value="Aguarde y se le generara un condigo QR para realizar el pago.\n Por favor, compartir el comprobante de pago.">QR DNI - QR BNA MODO</option>
+    </select>
+
+    </section>
+
+    <br>
+
     <button class = "btn-primary" id = "checkout-btn" onclick="sendOrder()">Enviar Pedido</button>
     <div id = "button-checkout"></div>
     `;
