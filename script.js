@@ -72,7 +72,7 @@ const products = {
     { id: 55, name: 'Milanesa c/ Fritas', price: 3500, quantity:1 },
     { id: 56, name: 'Hamburguesa c/ Fritas', price: 4000, quantity:1 },
     { id: 57, name: 'Lomo c/ Fritas', price: 5700, quantity:1 },
-    { id: 58, name: 'Lomopizza', price: 23000, quantity:1 },
+    { id: 58, name: 'Lomopizza', price: 22000, quantity:1 },
     { id: 59, name: 'Porcion Papas Fritas', price: 2200, quantity:1 },
   ],
   'Bebidas': [
