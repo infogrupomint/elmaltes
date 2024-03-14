@@ -76,12 +76,13 @@ const products = {
     { id: 59, name: 'Porcion Papas Fritas', price: 2400, quantity:1 },
   ],
   'Bebidas': [
-    { id: 60, name: 'Coca Cola 1.5 L', price: 2200, quantity:1 },
-    { id: 61, name: 'Coca Cola Zero 1.5 L', price: 2200, quantity:1 },
-    { id: 62, name: 'Sprite 1.5 L', price: 2200, quantity:1 },
-    { id: 63, name: 'Lata Cerveza Imperial Rubia', price: 1800, quantity:1 },
-    { id: 64, name: 'Lata Cerveza Imperial Apa', price: 1800, quantity:1 },
-    { id: 65, name: 'Lata Cerveza Imperial Roja', price: 1800, quantity:1 },
+    { id: 60, name: 'Coca Cola 1.5 L', price: 2500, quantity:1 },
+    { id: 61, name: 'Coca Cola Zero 1.5 L', price: 2500, quantity:1 },
+    { id: 62, name: 'Sprite 1.5 L', price: 2500, quantity:1 },
+     { id: 63, name: 'Fanta 1.5 L', price: 2500, quantity:1 },
+    { id: 64, name: 'Lata Cerveza Imperial Rubia', price: 1800, quantity:1 },
+    { id: 65, name: 'Lata Cerveza Imperial Apa', price: 1800, quantity:1 },
+    { id: 66, name: 'Lata Cerveza Imperial Roja', price: 1800, quantity:1 },
   ],
 
 };
