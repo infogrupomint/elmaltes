@@ -4,7 +4,7 @@ const categories = ['Pizzas', '1/2 Pizza', 'Empanadas', 'Canastitas', 'Sandwiche
 const products = {
   'Pizzas': [
     { id: 1, name: 'P. Muzzarella', price: 6000, quantity: 1,},
-    { id: 2, name: 'P. Especial', price: 850000, quantity: 1, },
+    { id: 2, name: 'P. Especial', price: 8500, quantity: 1, },
     { id: 3, name: 'P. Cebolla', price: 7950, quantity:1 },
     { id: 4, name: 'P. Napolitana', price: 9000, quantity:1 },
     { id: 5, name: 'P. Capresse', price: 7950, quantity:1 },
