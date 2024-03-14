@@ -55,33 +55,33 @@ const products = {
   ],
 
   'Empanadas': [
-    { id: 45, name: 'E. de Carne', price: 900, quantity:1 },
-    { id: 46, name: 'E. de Pollo', price: 900, quantity:1 },
-    { id: 47, name: 'E. de Jamon y Queso', price: 900, quantity:1 },
-    { id: 48, name: 'E. de Choclo', price: 900, quantity:1 },
-    { id: 49, name: 'E. de Cebolla', price: 900, quantity:1 },
-    { id: 50, name: 'E. de Verdura', price: 900, quantity:1 },
+    { id: 45, name: 'E. de Carne', price: 850, quantity:1 },
+    { id: 46, name: 'E. de Pollo', price: 850, quantity:1 },
+    { id: 47, name: 'E. de Jamon y Queso', price: 850, quantity:1 },
+    { id: 48, name: 'E. de Choclo', price: 850, quantity:1 },
+    { id: 49, name: 'E. de Cebolla', price: 850, quantity:1 },
+    { id: 50, name: 'E. de Verdura', price: 850, quantity:1 },
   ],
   'Canastitas': [
-    { id: 51, name: 'C. Capresse', price: 1000, quantity:1 },
-    { id: 52, name: 'C. Panceta y Cebolla', price: 1000, quantity:1 },
-    { id: 53, name: 'C. Roquefort y Nuez', price: 1000, quantity:1 },
-    { id: 54, name: 'C. Atun', price: 1000, quantity:1 },
+    { id: 51, name: 'C. Capresse', price: 950, quantity:1 },
+    { id: 52, name: 'C. Panceta y Cebolla', price: 950, quantity:1 },
+    { id: 53, name: 'C. Roquefort y Nuez', price: 950, quantity:1 },
+    { id: 54, name: 'C. Atun', price: 950, quantity:1 },
   ],
   'Sandwiches': [
     { id: 55, name: 'Milanesa c/ Fritas', price: 3500, quantity:1 },
     { id: 56, name: 'Hamburguesa c/ Fritas', price: 4000, quantity:1 },
     { id: 57, name: 'Lomo c/ Fritas', price: 5700, quantity:1 },
-    { id: 58, name: 'Lomopizza', price: 22000, quantity:1 },
+    { id: 58, name: 'Lomopizza', price: 23000, quantity:1 },
     { id: 59, name: 'Porcion Papas Fritas', price: 2200, quantity:1 },
   ],
   'Bebidas': [
-    { id: 60, name: 'Coca Cola 1.5 L', price: 2500, quantity:1 },
-    { id: 61, name: 'Coca Cola Zero 1.5 L', price: 2500, quantity:1 },
-    { id: 62, name: 'Sprite 1.5 L', price: 2500, quantity:1 },
+    { id: 60, name: 'Coca Cola 1.5 L', price: 2200, quantity:1 },
+    { id: 61, name: 'Coca Cola Zero 1.5 L', price: 2200, quantity:1 },
+    { id: 62, name: 'Sprite 1.5 L', price: 2200, quantity:1 },
     { id: 63, name: 'Lata Cerveza Imperial Rubia', price: 1800, quantity:1 },
     { id: 64, name: 'Lata Cerveza Imperial Apa', price: 1800, quantity:1 },
-    { id: 65, name: 'Lata Cerveza Imperial Negra', price: 1800, quantity:1 },
+    { id: 65, name: 'Lata Cerveza Imperial Roja', price: 1800, quantity:1 },
   ],
 
 };
@@ -162,15 +162,16 @@ function sendOrder() {
 
   // Formar el mensaje del pedido
 
+  const salaSeleccionada = document.getElementById('sala').value;
+  const ubicacion = document.getElementById('ubicacion').value;
+  const pago = document.getElementById('pago').value;
+  const horapedido = document.getElementById('horapedido').value;
+
   let mensajePedido =`----------------------------------\n`;
-  mensajePedido    += `   PEDIDO:    \n`;
+  mensajePedido    += `| ${horapedido} | PEDIDO:    \n`;
   let total = 0; // Inicializa una variable para almacenar el total
   
 
-
-    const salaSeleccionada = document.getElementById('sala').value;
-    const ubicacion = document.getElementById('ubicacion').value;
-    const pago = document.getElementById('pago').value;
     cart.forEach(item => {
       mensajePedido += ` ${item.name} - $${item.price}\n`;
       total += item.price; // Agrega el precio del artículo al total

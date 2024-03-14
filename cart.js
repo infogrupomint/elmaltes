@@ -115,6 +115,37 @@ const displayCart = () =>{
 
     </section>
 
+    <section class="hora" id="hora">
+    <h4>HORA DE PEDIDO</h4>
+    <select id="horapedido" > 
+        <option value="AHORA">AHORA (20 MINUTOS)</option>
+        <option value="19:30 Hs.">19:30 Hs.</option>
+        <option value="19:40 Hs.">19:40 Hs.</option>
+        <option value="19:50 Hs.">19:50 Hs.</option>
+        <option value="20:00 Hs.">20:00 Hs.</option>
+        <option value="20:10 Hs.">20:10 Hs.</option>
+        <option value="20:20 Hs.">20:20 Hs.</option>
+        <option value="20:30 Hs.">20:30 Hs.</option>
+        <option value="20:40 Hs.">20:40 Hs.</option>
+        <option value="20:50 Hs.">20:50 Hs.</option>
+        <option value="21:00 Hs.">21:00 Hs.</option>
+        <option value="21:10 Hs.">21:10 Hs.</option>
+        <option value="21:20 Hs.">21:20 Hs.</option>
+        <option value="21:30 Hs.">21:30 Hs.</option>
+        <option value="21:40 Hs.">21:40 Hs.</option>
+        <option value="21:50 Hs.">21:50 Hs.</option>
+        <option value="22:00 Hs.">22:00 Hs.</option>
+        <option value="22:10 Hs.">22:10 Hs.</option>
+        <option value="22:20 Hs.">22:20 Hs.</option>
+        <option value="22:30 Hs.">22:30 Hs.</option>
+        <option value="22:40 Hs.">22:40 Hs.</option>
+        <option value="22:50 Hs.">22:50 Hs.</option>
+        <option value="23:00 Hs.">23:00 Hs.</option>
+
+    </select>
+
+    </section>
+
     <br>
 
     <button class = "btn-primary" id = "checkout-btn" onclick="sendOrder()">Enviar Pedido</button>
